@@ -2,11 +2,11 @@ package airlinemanagement;
 
 import java.sql.*;
 
-public class Connect 
+public class Conn 
 {
     Connection c;
     Statement s;
-    public Connect()
+    public Conn()
     {
         try
         {

@@ -9,27 +9,27 @@ public class LoginPage extends JFrame implements ActionListener
 {
     JButton reset,submit,close;
     JTextField tfusername;
-    JPasswordField tfpass;
+    JPasswordField tfpassword;
     public LoginPage()
     {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         
-        JLabel lusername=new JLabel("Username");
-        lusername.setBounds(20, 20, 100, 20);
-        add(lusername);
+        JLabel lblusername=new JLabel("Username");
+        lblusername.setBounds(20, 20, 100, 20);
+        add(lblusername);
         
         tfusername= new JTextField();
         tfusername.setBounds(130,20,200,20);
         add(tfusername);
         
-        JLabel lpass=new JLabel("Password");
-        lpass.setBounds(20, 60, 100, 20);
-        add(lpass);
+        JLabel lblpassword=new JLabel("Password");
+        lblpassword.setBounds(20, 60, 100, 20);
+        add(lblpassword);
         
-        tfpass= new JPasswordField();
-        tfpass.setBounds(130,60,200,20);
-        add(tfpass);
+        tfpassword= new JPasswordField();
+        tfpassword.setBounds(130,60,200,20);
+        add(tfpassword);
         
         reset=new JButton("Reset");
         reset.setBounds(40, 120, 120, 20);
@@ -55,15 +55,15 @@ public class LoginPage extends JFrame implements ActionListener
         if(ae.getSource()==reset)
         {
             tfusername.setText("");
-            tfpass.setText("");
+            tfpassword.setText("");
         }
         else if(ae.getSource()==submit)
         {
             String username=tfusername.getText();
-            String password=tfpass.getText();
+            String password=tfpassword.getText();
             try
             {
-                Connect c=new Connect();
+                Conn c=new Conn();
                 String query="select * from login where username = '"+username+"' and password = '"+password+"'";
                 
                 ResultSet rs=c.s.executeQuery(query);
