@@ -5,12 +5,12 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class LoginPage extends JFrame implements ActionListener
+public class Login extends JFrame implements ActionListener
 {
     JButton reset,submit,close;
     JTextField tfusername;
     JPasswordField tfpassword;
-    public LoginPage()
+    public Login()
     {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
@@ -88,6 +88,6 @@ public class LoginPage extends JFrame implements ActionListener
     }
     public static void main(String args[])
     {
-        new LoginPage();
+        new Login();
     }
 }
